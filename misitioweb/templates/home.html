@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+
+<body>
+    {% extends "layout.html" %}
+    {% block title %} Mi sitio web {%endblock%}
+    {% block content %}
+        <h2> Bienvenido </h2>
+        {% if user.is_authenticated %}
+            {{ user.username }}
+            {% else %}
+            Visitante
+        {% endif %}
+    {%endblock%}
+
+</body>
+
+
+</html>

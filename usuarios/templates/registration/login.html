@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Iniciar sesión</button>
+        <br>
+        <a href="{% url 'password_reset' %}">Olvidaste tu contraseña?</a>
+    </form>
+  
+{% endblock content %}
